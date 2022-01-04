@@ -13,6 +13,10 @@ yarn type-check
 
 Reference the `test-cases.ts` file inside each [challenge folders](https://github.com/type-challenges/type-challenges/tree/master/questions).
 
+## Recommended Solutions
+
+https://github.com/type-challenges/type-challenges/labels/recommended
+
 ## LICENSE
 
 MIT
