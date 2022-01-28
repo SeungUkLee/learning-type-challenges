@@ -1,9 +1,9 @@
-import { Equal, Expect, ExpectFalse, NotEqual } from '@type-challenges/utils'
+import { Equal, Expect } from '@type-challenges/utils'
 
 /* Solution */
-export type Join<T extends string[], U extends string | number> = JoinIter<T, U, "">
+export type Join<T extends readonly unknown[], U extends string | number> = JoinIter<T, U, "">
 
-type JoinIter<T extends unknown[], U extends string | number, Acc extends string> =
+type JoinIter<T extends readonly unknown[], U extends string | number, Acc extends string> =
   T['length'] extends 1
   ? `${Acc}${T[0] & string}`
   : T extends [infer F, ...infer R]
