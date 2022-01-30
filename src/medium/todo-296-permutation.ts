@@ -1,4 +1,4 @@
-import { Equal, Expect } from '@type-challenges/utils'
+// import { Equal, Expect } from '@type-challenges/utils'
 
 /* Solution */
 // type Permutation<T extends readonly unknown[]> = ;
