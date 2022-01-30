@@ -1,7 +1,8 @@
 import { Equal, Expect } from '@type-challenges/utils'
+import { AnyObject } from '../utils';
 
 /* Solution */
-export type Merge<F extends {}, S extends {}> = {
+export type Merge<F extends AnyObject, S extends AnyObject> = {
   [K in keyof F | keyof S]: K extends keyof S
   ? S[K]
   : K extends keyof F ? F[K] : never

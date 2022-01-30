@@ -1,10 +1,16 @@
-import { Alike, Expect } from '@type-challenges/utils';
+import { Expect, Alike } from '@type-challenges/utils';
+import { EmptyObject } from '../utils';
 
 /* Solution */
-export type Chainable<T = {}> = {
-  option: <K extends string, V>(k: K, v: V) => Chainable<T & { [P in K]: V }>
+export type Chainable = _Chainable<EmptyObject>;
+
+type _Chainable<T extends Record<string, unknown>> = {
+  option: <K extends string, V>(k: K, v: V) => T extends EmptyObject
+    ? _Chainable<{ [P in K]: V }>
+    : _Chainable<T & { [P in K]: V }>
   get: () => T;
 };
+
 
 /* Test Cases */
 export type Cases = [

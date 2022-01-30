@@ -1,8 +1,9 @@
 import { Equal, Expect } from '@type-challenges/utils'
+import { AnyObject } from '../utils'
 
 /* Solution */
 
-type Diff<O extends {}, O1 extends {}> = {
+type Diff<O extends AnyObject, O1 extends AnyObject> = {
   [K in Exclude<keyof O, keyof O1> | Exclude<keyof O1, keyof O>]: K extends keyof O
   ? O[K]
   : K extends keyof O1 ? O1[K] : never

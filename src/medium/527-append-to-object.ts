@@ -1,7 +1,8 @@
 import { Equal, Expect } from '@type-challenges/utils'
+import { AnyObject } from '../utils'
 
 /* Solution */
-export type AppendToObject<T extends {}, U extends string, V> = {
+export type AppendToObject<T extends AnyObject, U extends string, V> = {
   [K in keyof T | U]: K extends keyof T ? T[K] : V
 }
 
