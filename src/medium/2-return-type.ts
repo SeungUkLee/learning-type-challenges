@@ -1,7 +1,7 @@
 import { Equal, Expect } from '@type-challenges/utils';
 
 /* Solution */
-export type MyReturnType<Fn extends (...args: any) => any> = Fn extends (...args: any) => infer R ? R : never;
+export type MyReturnType<Fn extends (...args: never) => unknown> = Fn extends (...args: never) => infer R ? R : never;
 
 /* Test Cases */
 export type Cases = [

@@ -1,7 +1,7 @@
 import { Equal, Expect } from '@type-challenges/utils';
 
 /* Solution */
-export type MyParameters<Fn extends (...args: any) => any> = Fn extends (...args: infer P) => any ? P : never;
+export type MyParameters<Fn extends (...args: never) => unknown> = Fn extends (...args: infer P) => unknown ? P : never;
 
 /* Test Cases */
 export type Cases = [
