@@ -1,1 +1,1 @@
-export { EmptyObject, AnyObject, IndexSignature } from "./types"
+export { EmptyObject, AnyObject } from "./types"

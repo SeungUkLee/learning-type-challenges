@@ -1,8 +1,7 @@
 import { Equal, Expect } from '@type-challenges/utils';
-import { IndexSignature } from '../utils';
 
 /* Solution */
-export type TupleToObject<T extends readonly IndexSignature[]> = {
+export type TupleToObject<T extends readonly PropertyKey[]> = {
   [P in T[number]]: P
 };
 
