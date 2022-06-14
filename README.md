@@ -9,9 +9,9 @@ Learning advanced types of typescript with [type-challenges](https://github.com/
 yarn type-check
 ```
 
-## Test cases reference
+## Test cases
 
-Reference the `test-cases.ts` file inside each [challenge folders](https://github.com/type-challenges/type-challenges/tree/master/questions).
+You can refer to the `test-cases.ts` file in each [challenge folders](https://github.com/type-challenges/type-challenges/tree/master/questions).
 
 ## Recommended Solutions
 
